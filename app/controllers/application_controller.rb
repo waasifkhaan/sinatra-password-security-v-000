@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	post "/signup" do
-	  @user = User.new(username: params["username"] password: params["password_digest"])
+	  @user = User.new(:username => params["username"] password: => params["password"])
 		#your code here!
 	end
 
